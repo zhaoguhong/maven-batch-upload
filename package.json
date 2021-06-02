@@ -1,0 +1,22 @@
+{
+  "name": "maven-batch-upload",
+  "version": "1.0.0",
+  "description": "batch delpoy to nexus",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhaoguhong/maven-batch-upload.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhaoguhong/maven-batch-upload/issues"
+  },
+  "homepage": "https://github.com/zhaoguhong/maven-batch-upload#readme",
+  "devDependencies": {
+    "shelljs": "^0.8.4"
+  }
+}
