@@ -17,7 +17,7 @@ npm install
 ```
 修改 config.js
 
-```hs
+```js
 module.exports = {
 
     // 非必填, 默认 ~/.m2/repository"
