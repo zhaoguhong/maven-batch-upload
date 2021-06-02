@@ -25,7 +25,7 @@ module.exports = {
     // 非必填, 默认 ~/.m2/repository"
     repoBasePath: "",
     // 必填参数，上传指定文件夹下的， 示例 /Users/xxx/.m2/repository/com/spring
-    filePath: "/Users/zhaojianhe/.m2/repository/com/geelytech",
+    filePath: "/Users/xxx/.m2/repository/com/spring",
     // 指定上传的类型 pom , jar ，all  ,all 表示上传所有
     uploadPackaging : "jar",
     // 远程仓库id
