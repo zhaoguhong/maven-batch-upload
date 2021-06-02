@@ -142,11 +142,11 @@ async function execute() {
         let mavenshell = `mvn deploy:deploy-file -Dmaven.test.skip=true   -DgroupId=${gav.groupId}   -DartifactId=${gav.artifactId}  -Dversion=${gav.version} -Dpackaging=${gav.packaging}    -Dfile=${gav.file}  ${pomFileShell}  -DrepositoryId=${currentRepositoryId} -Durl=${currentRepositoryUrl}`
         console.log(`start maven upload, packaging=${gav.packaging},groupId=${gav.groupId},${gav.artifactId}-${gav.version}`);
         // console.log(mavenshell);
-        // if (shell.exec(mavenshell).code !== 0) {
-        //     errorGav.push(`groupId=${gav.groupId},${gav.artifactId}-${gav.version}`)
-        // } else {
-        //     console.log(`maven upload success, packaging=${gav.packaging},groupId=${gav.groupId},${gav.artifactId}-${gav.version}`);
-        // }
+        if (shell.exec(mavenshell).code !== 0) {
+            errorGav.push(`groupId=${gav.groupId},${gav.artifactId}-${gav.version}`)
+        } else {
+            console.log(`maven upload success, packaging=${gav.packaging},groupId=${gav.groupId},${gav.artifactId}-${gav.version}`);
+        }
     })
     console.log(`上传成功数量: ${uploadList.length - errorGav.length} , 失败数量: ${errorGav.length}`);
     if(errorGav.length > 0){
