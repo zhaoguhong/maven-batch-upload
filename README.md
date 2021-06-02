@@ -10,11 +10,13 @@
 
 ## 使用
 
-安装依赖
+### 安装依赖
 
-```
+```bash
 npm install
 ```
+### 修改配置
+
 修改 config.js
 
 ```js
@@ -36,14 +38,17 @@ module.exports = {
     snapshotRepositoryUrl: ""
 }
 ```
-上传
+### 上传
 
-```
+执行
+
+```bash
 node index.js
 ```
+
 或者
 
-```
+```bash
 npm run upload
 ```
 
