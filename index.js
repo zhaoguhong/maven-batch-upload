@@ -16,8 +16,8 @@ if(!filePath){
     return
 }
 
-// 仓库地址，获取groupId时要去除掉
-let workPath = path.join(os.homedir(), "maven-temp")
+// maven deploy 的时候不支持在本地仓库执行，因此新建一个临时使用的文件夹
+let workPath = path.join(os.homedir(), "maven-temp-" + Date.now())
 let uploadPackaging = config.uploadPackaging
 
 if (!fs.existsSync(workPath)) {
@@ -153,6 +153,8 @@ async function execute() {
         console.log(`error gav: ${errorGav}`);
     }
 
+    // 删除掉临时的文件夹
+    shell.exec(`rm -rf ${workPath}`)
 }
 
 execute()
